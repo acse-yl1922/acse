@@ -1,0 +1,8 @@
+name: ACS
+dependencies:
+ - ipython
+ - jupyter
+ - numpy
+ - scipy
+ - pip:
+   - -r requirements.txt
