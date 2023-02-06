@@ -1,0 +1,28 @@
+name: check-import
+
+# Only run this when the main branch changes
+on:
+  push:
+    branches:
+    - main
+
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+jobs:
+  check-import:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Check import works
+      run: |
+        python -c "import automata;"
