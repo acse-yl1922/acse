@@ -1,0 +1,8 @@
+*~
+_pycache_/
+.ipynb_checkpoints/
+flood_tool/_pycache_
+.idea/
+__pycache__/
+.DS_Store
+flood_tool/.DS_Store
